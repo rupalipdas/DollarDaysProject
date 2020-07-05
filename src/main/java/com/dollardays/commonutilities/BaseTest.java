@@ -1,21 +1,51 @@
 package com.dollardays.commonutilities;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
-	//launchApp
-	//Instantiate web driver
-	//closeApp
+	public static WebDriver driver;
+	public static Properties prop;
+
 	
-	private static WebDriver driver;
+	public Properties ReadPropertyFile() throws IOException {
+		FileInputStream ip;
+		prop = new Properties();
 
-
-
-	public static WebDriver getWebDriver() {
-		if (BaseTest.driver == null) {
-			BaseTest.driver = new ChromeDriver();
-		}
-		return BaseTest.driver;
+		ip = new FileInputStream("config.properties");
+		prop.load(ip);
+		return prop;
 	}
+
+	public void initialization() throws IOException {
+
+		prop = ReadPropertyFile();
+
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+
+		String baseUrl = prop.getProperty("url");
+
+		driver.get(baseUrl);
+		
+
+		driver.manage().timeouts().pageLoadTimeout(BasePage.Page_Load_Timeout, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().implicitlyWait(BasePage.Implicit_Wait, TimeUnit.SECONDS);
+
+		driver.manage().window().maximize();
+
+		driver.manage().deleteAllCookies();
+	}
+
+	public void termination() {
+		driver.close();
+	}
+
 }
