@@ -10,7 +10,7 @@ import com.baseclass.Library;
 import com.pages.DDsMenuPage;
 import com.reusablefunctions.SeleniumUtility;
 
-public class MenuTestCase extends Library{
+public class MenuTestCase extends BaseTest{
 	
 	DDsMenuPage DDM;
 	
@@ -33,6 +33,7 @@ public class MenuTestCase extends Library{
 	}
 	
 	@AfterClass
+	//public static void extendReport() {
 	public void teardown() throws IOException{
 		SeleniumUtility utility = new SeleniumUtility(driver);
 		utility.to_take_screenshot("src/test/resources/Screenshots/Menu_1.png");
@@ -40,4 +41,5 @@ public class MenuTestCase extends Library{
 		quit();
 }
 }
+
 

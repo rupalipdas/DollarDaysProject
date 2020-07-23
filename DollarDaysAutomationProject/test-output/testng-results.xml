@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34470" started-at="2020-07-08T22:17:59Z" finished-at="2020-07-08T22:18:34Z">
+  <suite name="Default suite" duration-ms="34102" started-at="2020-07-11T20:19:10Z" finished-at="2020-07-11T20:19:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34470" started-at="2020-07-08T22:17:59Z" finished-at="2020-07-08T22:18:34Z">
+    <test name="Default test" duration-ms="34102" started-at="2020-07-11T20:19:10Z" finished-at="2020-07-11T20:19:44Z">
       <class name="com.testcases.MenuTestCase">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="setup" is-config="true" duration-ms="13834" started-at="2020-07-08T15:17:59Z" finished-at="2020-07-08T15:18:13Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="setup" is-config="true" duration-ms="13187" started-at="2020-07-11T13:19:10Z" finished-at="2020-07-11T13:19:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Menu()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="Menu" duration-ms="15584" started-at="2020-07-08T15:18:13Z" finished-at="2020-07-08T15:18:29Z">
+        <test-method status="PASS" signature="Menu()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="Menu" duration-ms="15643" started-at="2020-07-11T13:19:23Z" finished-at="2020-07-11T13:19:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Menu -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="teardown" is-config="true" duration-ms="5029" started-at="2020-07-08T15:18:29Z" finished-at="2020-07-08T15:18:34Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.testcases.MenuTestCase@3d680b5a]" name="teardown" is-config="true" duration-ms="5234" started-at="2020-07-11T13:19:38Z" finished-at="2020-07-11T13:19:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
